@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>ShellCommand Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy policy for the ShellCommand iPhone and iPad app."
+    >
+    <style>
+      :root {
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        color: #17251f;
+        background: #f4f8f5;
+        line-height: 1.6;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        width: min(48rem, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 4rem 0;
+      }
+
+      article {
+        padding: clamp(1.5rem, 4vw, 3rem);
+        border: 1px solid #cbd9d0;
+        border-radius: 1.25rem;
+        background: #ffffff;
+        box-shadow: 0 1rem 3rem rgb(20 52 37 / 8%);
+      }
+
+      h1,
+      h2 {
+        line-height: 1.2;
+        color: #0f5132;
+      }
+
+      h1 {
+        margin-top: 0;
+        font-size: clamp(2rem, 6vw, 3.25rem);
+      }
+
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.25rem;
+      }
+
+      .summary {
+        padding: 1rem 1.25rem;
+        border-left: 0.3rem solid #2e7d52;
+        border-radius: 0.25rem;
+        background: #edf7f0;
+        font-weight: 600;
+      }
+
+      a {
+        color: #17663e;
+      }
+
+      footer {
+        margin-top: 2rem;
+        color: #53645b;
+        font-size: 0.9rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          color: #e8f1eb;
+          background: #0f1713;
+        }
+
+        article {
+          border-color: #33483d;
+          background: #17221c;
+          box-shadow: none;
+        }
+
+        h1,
+        h2,
+        a {
+          color: #8bd2aa;
+        }
+
+        .summary {
+          border-color: #63b78a;
+          background: #1c3326;
+        }
+
+        footer {
+          color: #acbcb2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>ShellCommand Privacy Policy</h1>
+        <p><strong>Effective date:</strong> August 14, 2026</p>
+
+        <p class="summary">
+          ShellCommand is a local-first SSH client with no developer-operated
+          cloud service or user account. It includes no advertising, tracking,
+          or analytics SDK. During ordinary SSH operation, the app does not
+          transmit your SSH configuration, saved commands, or command output to
+          the developer. TestFlight feedback and diagnostics are described
+          separately below.
+        </p>
+
+        <p>
+          ShellCommand (<code>dev.kristopher.shellcommand</code>) is developed
+          by Kristopher Keller. This policy covers the official Android, iPhone,
+          and iPad applications.
+        </p>
+
+        <h2>Information processed on your device</h2>
+        <p>
+          ShellCommand may store the following information in its private local
+          database:
+        </p>
+        <ul>
+          <li>
+            SSH key names, public keys, opaque protected-key references,
+            hardware-security descriptions, and authentication policies.
+            Private key material is not stored in the database and is not
+            exportable from Android Keystore or the iOS Secure Enclave.
+          </li>
+          <li>
+            Host labels, hostnames or IP addresses, ports, SSH usernames,
+            assigned key identifiers, and accepted server host-key pins and
+            fingerprints.
+          </li>
+          <li>
+            Saved command names and exact command text, plus host allowlists.
+          </li>
+          <li>
+            Run history, including timestamps, command and host snapshots,
+            result and error states, exit information, and captured standard
+            output and standard error.
+          </li>
+        </ul>
+        <p>
+          On Android, Remote Workspace also processes unsent command drafts,
+          live command output, remote directory listings, executable names
+          discovered from the remote <code>PATH</code>, and small read-only
+          UTF-8 file previews. Drafts, listings, previews, and the live
+          connection remain in memory; completed workspace actions are saved to
+          local run history. iOS does not currently include Remote Workspace or
+          remote file browsing.
+        </p>
+        <p>
+          ShellCommand does not request or process contacts, photos, camera,
+          microphone, health, payment, advertising-identifier, or precise
+          location data.
+        </p>
+
+        <h2>SSH connections and remote systems</h2>
+        <p>
+          When you initiate a connection, ShellCommand connects directly to the
+          hostname or IP address you configured. The SSH server receives the SSH
+          username, public-key authentication material, and exact command you
+          approved; it returns server identity data, status, and command output.
+          Android Remote Workspace can additionally request read-only directory
+          metadata and file previews. These exchanges are encrypted by SSH.
+          Your private SSH key and biometric or device passcode data are never
+          sent to the server.
+        </p>
+        <p>
+          The developer does not proxy or receive these connections. The
+          operator of a host you choose may log or retain connection metadata,
+          usernames, public keys, commands, output, and server-side effects
+          under its own policies. Only connect to systems you trust and are
+          authorized to use. Canceling or backgrounding ShellCommand stops the
+          local connection but cannot guarantee that a command already submitted
+          to a remote server has stopped there.
+        </p>
+
+        <h2>Device authentication</h2>
+        <p>
+          ShellCommand asks Android or iOS to authorize use of a protected SSH
+          key. The operating system performs biometric or device-credential
+          authentication. ShellCommand does not receive or store your
+          fingerprint, face template, or passcode; it receives only the
+          authorization result or an authorized cryptographic operation.
+        </p>
+
+        <h2>Clipboard</h2>
+        <p>
+          ShellCommand writes a public key, command, standard output, or standard
+          error to the system clipboard only after you choose a Copy action. The
+          operating system controls clipboard retention and access by other
+          apps. Avoid copying sensitive output unless needed, and clear or
+          replace the clipboard when appropriate.
+        </p>
+
+        <h2>TestFlight and Apple distribution services</h2>
+        <p>
+          If you use a beta through TestFlight, Apple automatically collects and
+          shares with the developer certain tester, installation, device, usage,
+          session, and crash information. If you submit TestFlight
+          feedback, Apple may also share your comments, screenshots, contact
+          information, and device context. The developer uses this information
+          only to administer the beta, respond to feedback, diagnose defects,
+          and improve ShellCommand. It is not used for advertising or tracking
+          and is not shared with other third parties.
+        </p>
+        <p>
+          The developer does not maintain a separate analytics database. If a
+          TestFlight report is downloaded for investigation, that copy is kept
+          only as long as reasonably needed to resolve the related issue and is
+          then deleted. Apple states that it retains beta feedback for one year
+          and may retain crash and usage data until related bugs are resolved.
+          Apple controls copies held in TestFlight under
+          <a href="https://www.apple.com/legal/privacy/data/en/test-flight/">
+            TestFlight &amp; Privacy</a>. Apple privacy requests can also be
+          managed at <a href="https://privacy.apple.com/">privacy.apple.com</a>.
+          You may contact the developer using the address below to request
+          deletion of tester records or feedback copies that the developer
+          controls.
+        </p>
+
+        <h2>Third-party software and disclosure</h2>
+        <p>
+          ShellCommand bundles open-source AndroidX, Kotlin, Compose, cbssh,
+          SwiftNIO, and Swift Crypto components. They operate as part of the app
+          on your device and do not independently receive app data. The app has
+          no advertising, analytics, or third-party tracking SDK. The developer
+          does not sell, rent, or share app data with advertising networks,
+          analytics providers, or data brokers. Apple provides distribution and
+          TestFlight services under Apple's privacy terms. User-selected SSH
+          hosts are destinations you direct the app to contact, not services
+          selected or operated by the developer.
+        </p>
+
+        <h2>Storage, retention, and deletion</h2>
+        <p>
+          Hosts, saved commands, key records, and server pins remain on the
+          device until you edit or delete them or remove app data. Run history
+          is automatically limited to 50 records, no more than 8 MiB of captured
+          output per record, and no more than 32 MiB of captured output in
+          total. The oldest records are removed as needed. You can delete an
+          individual history record or clear all history at any time.
+        </p>
+        <p>
+          Deleting a host or saved command does not rewrite detached snapshots
+          already present in run history; clear those history records separately
+          if you want them removed. A successful in-app deletion of an unused
+          SSH key removes its app record and protected device key, but it does
+          not remove the
+          corresponding public key from any server's
+          <code>authorized_keys</code> file. Revoke that public key on each
+          server separately.
+        </p>
+        <p>
+          Android cloud backup and device-transfer backup are disabled for
+          ShellCommand data. The iOS database is excluded from backup and uses
+          complete file protection while the device is locked. For the most
+          reliable supported key removal, delete an unused key inside
+          ShellCommand before uninstalling. The app reports if that deletion
+          fails. Operating-system protected-key storage has platform-specific
+          uninstall behavior. On a later successful iOS launch, ShellCommand
+          attempts to reconcile its local database with app-owned Keychain items
+          and remove orphaned items, but that cleanup can fail and is not a
+          secure-erasure guarantee.
+        </p>
+        <p>
+          Database deletion is logical deletion and does not promise forensic
+          secure erasure from flash storage. Remote server logs, files, command
+          effects, and copied clipboard contents are outside ShellCommand's
+          control and must be deleted at their source.
+        </p>
+
+        <h2>Security</h2>
+        <p>
+          ShellCommand isolates app data using platform storage protections,
+          uses non-exportable protected SSH keys, pins accepted server
+          identities, and encrypts network traffic with SSH. No security measure
+          eliminates all risk. Keep your device secured, independently verify
+          first-use host-key fingerprints, and maintain a separate
+          administrative recovery path for every host.
+        </p>
+
+        <h2>This policy website</h2>
+        <p>
+          This page is hosted by GitHub Pages. The developer adds no cookies,
+          scripts, analytics, or tracking to it. GitHub may process ordinary web
+          request information as the hosting provider under the
+          <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">
+            GitHub Privacy Statement</a>.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          ShellCommand is a developer utility and is not directed to children.
+          The developer does not knowingly collect personal information from
+          children through the app.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          This policy and its effective date will be updated before
+          ShellCommand's data practices change in a material way. Applicable
+          store privacy disclosures will also be kept current.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about this policy can be sent to
+          <a href="mailto:kristopher004@gmail.com">kristopher004@gmail.com</a>.
+        </p>
+      </article>
+
+      <footer>
+        ShellCommand is developed by Kristopher Keller.
+      </footer>
+    </main>
+  </body>
+</html>
